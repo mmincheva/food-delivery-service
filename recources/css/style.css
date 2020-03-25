@@ -26,7 +26,7 @@ html, body {
     zoom: 1;
 }
 
-.clearfix::after {
+.clearfix:after {
     content: '.';
     clear: both;
     display: block;
@@ -239,6 +239,41 @@ header {
     border-bottom: 2px solid #e67e22;
 }
 
+/*----------- MOBILE NAVI ------------------*/
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+/*----------- STICKY NAVI ------------------*/
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.993);
+    box-shadow: 0 2px 2px rgb(233, 233, 233);
+    z-index: 9999;
+}
+
+.sticky .main-nav {margin-top: 18px;}
+
+.sticky .main-nav li a:link, .sticky .main-nav li a:visited {
+    padding: 16px 0px;
+    color: #555;    
+}
+.sticky .logo {display: none;}
+.sticky .logo-black {display: block;}
+
 /* ---------------------------------------- */
 
 /* ------------- FEATURES------------------ */
@@ -300,13 +335,17 @@ header {
     background-color: #f4f4f4;
 }
 
-.steps-box:first-child {
-    text-align: right;
-    padding: 3%;
+.step-box {
     margin-top: 30px;
 }
 
+.steps-box:first-child {
+    text-align: right;
+    padding: 3%;    
+}
+
 .steps-box:last-child {
+    text-align: left;
     padding-left: 3%;
     margin-top: 70px;
 }
@@ -315,7 +354,7 @@ header {
     width: 40%;
 }
 
-.works-steps {
+.works-step {
     margin-bottom: 50px;
 }
 
@@ -328,17 +367,17 @@ header {
     border: 2px solid #e67e22;
     display: inline-block;
     border-radius: 50%;
-    height: 55px;
-    width: 55px;
+    height: 54px;
+    width: 54px;
     text-align: center;
     padding: 5px;
     float: left;
     font-size: 150%;
-    margin-right: 25px;
+    margin-right: 25px;    
 }
 
 .btn-app:link, .btn-app:visited {
-    border-bottom: none;
+    border: 0;
 }
 
 .btn-app img {
@@ -568,3 +607,29 @@ footer p {
     text-align: center;    
     margin-top: 20px;
 }
+
+
+/* ---------------------------------------- */
+
+/* ------------ ANIMATIONS ---------------- */
+
+/* ---------------------------------------- */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
+
+
