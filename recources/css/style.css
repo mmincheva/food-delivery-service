@@ -12,13 +12,14 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     background-color: #fff;
     color: rgb(58, 58, 58);
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 .clearfix {
@@ -205,6 +206,13 @@ header {
     float: left;
     margin-top: 20px;
 }
+.logo-black { 
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
 
 .main-nav {
     float: right;
@@ -307,7 +315,7 @@ header {
     width: 40%;
 }
 
-.works-step {
+.works-steps {
     margin-bottom: 50px;
 }
 
